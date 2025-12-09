@@ -304,7 +304,7 @@ export default function MiniCrossword() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-600 to-indigo-600 flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-xl p-6 w-full max-w-sm flex flex-col items-center gap-6">
-        <h1 className="text-2xl font-bold text-gray-800">Mini Crossword</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Mini Crossword v2</h1>
 
         {feedback && (
           <div className={`p-3 rounded-lg w-full text-center ${isSolved ? 'bg-green-200 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
