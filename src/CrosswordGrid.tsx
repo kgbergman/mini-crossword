@@ -35,7 +35,7 @@ const CrosswordGrid: React.FC<CrosswordGridProps> = ({
         backgroundColor: '#ffffff',
         aspectRatio: 1,
         marginBottom: '0.5rem',
-        height: '40vh'
+        height: '45vh'
     };
 
     return (

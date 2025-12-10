@@ -408,7 +408,7 @@ export default function MiniCrossword() {
           borderRadius: '0.5rem',
           marginTop: '0.25rem',
           marginBottom: '0.25rem',
-          height: '5vh'
+          display: 'flex'
         }}>
           ⏱️ {formatTime(elapsed)}
         </div>
