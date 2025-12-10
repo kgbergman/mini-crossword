@@ -14,17 +14,18 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
         userSelect: "none",
         padding: "0.5rem",
         backgroundColor: '#ccc',
-        borderBottomRightRadius: '1.5rem',
-        borderBottomLeftRadius: '1.5rem',
         minHeight: '35vh',
-        paddingBottom: '5vh'
+        paddingBottom: '5vh',
+        flex: 1
     };
 
     const rowStyle: React.CSSProperties = {
         display: "flex",
         justifyContent: "center",
         gap: "0.375rem",
-        height: '33%'
+        height: '33%',
+        paddingLeft: "0.375rem",
+        paddingRight: "0.375rem",
     };
 
     const spacingStyle: React.CSSProperties = {

@@ -391,11 +391,12 @@ export default function MiniCrossword() {
       <div style={{
         boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
         width: '100%',
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        aspectRatio: 11 / 18
+        maxWidth: '75vh'
       }}>
 
         {/* Timer */}
@@ -406,7 +407,8 @@ export default function MiniCrossword() {
           padding: '0.5rem 1rem',
           borderRadius: '0.5rem',
           marginTop: '0.25rem',
-          marginBottom: '0.25rem'
+          marginBottom: '0.25rem',
+          height: '5vh'
         }}>
           ⏱️ {formatTime(elapsed)}
         </div>
