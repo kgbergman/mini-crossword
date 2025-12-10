@@ -1,0 +1,14 @@
+{
+  "clues": [
+      { "number": 1, "clue": "___ Mahal", "row": 0, "col": 2, "answer": "TAJ", "direction": "ACROSS" },
+      { "number": 4, "clue": "Everything must go! event", "row": 1, "col": 1, "answer": "SALE", "direction": "ACROSS" },
+      { "number": 5, "clue": "Deadly snake with fangs that fold upward", "row": 2, "col": 0, "answer": "VIPER", "direction": "ACROSS" },
+      { "number": 6, "clue": "Netflix crime drama set in the mountains of Missouri", "row": 3, "col": 0, "answer": "OZARK", "direction": "ACROSS" },
+      { "number": 7, "clue": "W, on a map", "row": 4, "col": 0, "answer": "WEST", "direction": "ACROSS" },
+      { "number": 5, "clue": "Oath", "row": 2, "col": 0, "answer": "VOW", "direction": "DOWN" },
+      { "number": 4, "clue": "Shoebox number", "row": 1, "col": 1, "answer": "SIZE", "direction": "DOWN" },
+      { "number": 1, "clue": "Spanish small plates", "row": 0, "col": 2, "answer": "TAPAS", "direction": "DOWN" },
+      { "number": 2, "clue": "Ding on a phone, e.g.", "row": 0, "col": 3, "answer": "ALERT", "direction": "DOWN" },
+      { "number": 3, "clue": "Meanie face", "row": 0, "col": 4, "answer": "JERK", "direction": "DOWN" }
+  ]
+}

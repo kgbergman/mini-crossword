@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +67,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+html, body, #root, #app {
+  /* Ensure the entire viewport is covered */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Optional: Prevents browser default gray/white background showing through */
+  background-color: #1a1a1a; 
+}
+
+input{
+  caret-color: transparent;
 }
