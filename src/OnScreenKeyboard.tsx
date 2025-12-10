@@ -16,12 +16,14 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
         backgroundColor: '#ccc',
         borderBottomRightRadius: '1.5rem',
         borderBottomLeftRadius: '1.5rem',
+        minHeight: '35vh'
     };
 
     const rowStyle: React.CSSProperties = {
         display: "flex",
         justifyContent: "center",
         gap: "0.375rem",
+        height: '33%'
     };
 
     const spacingStyle: React.CSSProperties = {
@@ -33,34 +35,39 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
         padding: "0.5rem 0.75rem",
         backgroundColor: "#f7f7f7",
         borderRadius: "0.75rem",
-        height: '6vh',
+        height: '100%',
+        boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
+        fontSize: "1rem",
+        cursor: "pointer",
+        color: 'black',
+        minWidth: "2rem",
+    };
+
+    const backspaceSpacingStyle: React.CSSProperties = {
+        flex: "0 1 auto", // shrink if needed, don't force fill
+        padding: "0.5rem 0.75rem",
+        backgroundColor: "transparent",
+        borderRadius: "0.75rem",
+        height: '100%',
+        fontSize: "0.75rem",
+        cursor: "pointer",
+        color: 'transparent',
+        fontWeight: 'bold',
+        minWidth: "3rem"
+    };
+
+    const backspaceStyle: React.CSSProperties = {
+        flex: "0 1 auto", // shrink if needed, don't force fill
+        padding: "0.5rem 0.75rem",
+        backgroundColor: "#aaa",
+        borderRadius: "0.75rem",
+        height: '100%',
         boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
         fontSize: "0.75rem",
         cursor: "pointer",
         color: 'black',
-        minWidth: "2rem"
-    };
-
-    const backspaceSpacingStyle: React.CSSProperties = {
-        flex: "1",
-        padding: "0.5rem 0.75rem",
-        backgroundColor: "transparent",
-        borderRadius: "0.75rem",
-        fontSize: "1rem",
         fontWeight: 'bold',
-        color: 'transparent'
-    };
-
-    const backspaceStyle: React.CSSProperties = {
-        flex: "1",
-        padding: "0.5rem 0.75rem",
-        backgroundColor: "#999",
-        borderRadius: "0.75rem",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
-        fontSize: "1rem",
-        fontWeight: 'bold',
-        cursor: "pointer",
-        color: 'black'
+        minWidth: "3rem"
     };
 
     return (
