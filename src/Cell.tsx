@@ -44,14 +44,15 @@ const Cell: React.FC<CellProps> = ({
     const cellContainerStyle: React.CSSProperties = {
         position: 'relative',
         display: 'flex',
-        flex: 1
+        flex: 1,
+        aspectRatio: 1
     };
 
     const clueNumberStyle: React.CSSProperties = {
         position: 'absolute',
         top: '0.125rem',
         left: '0.25rem',
-        fontSize: '1rem',
+        fontSize: '0.75rem',
         fontWeight: 'bold',
         color: '#374151', // gray-700
         zIndex: 10
@@ -61,7 +62,7 @@ const Cell: React.FC<CellProps> = ({
         width: '100%',
         height: '100%',
         textAlign: 'center',
-        fontSize: '2.5rem',
+        fontSize: '2rem',
         fontWeight: 600,
         color: '#1f2937',
         borderTop: '1px solid #d1d5db',
@@ -69,6 +70,9 @@ const Cell: React.FC<CellProps> = ({
         outline: 'none',
         backgroundColor,
         transition: 'background-color 0.1s',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         ...solvedStyle
     };
 
@@ -77,15 +81,14 @@ const Cell: React.FC<CellProps> = ({
             {clueNumber > 0 && (
                 <span style={clueNumberStyle}>{clueNumber}</span>
             )}
-            <input
+            <div
                 ref={inputRef}
-                maxLength={1}
                 tabIndex={-1}
-                value={cellValue}
                 onClick={() => handleClick(r, c)}
                 style={inputStyle}
-                disabled={isSolved}
-            />
+            >
+                {cellValue[0]}
+            </div>
         </div>
     );
 };

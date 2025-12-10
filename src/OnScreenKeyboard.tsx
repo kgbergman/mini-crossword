@@ -29,15 +29,16 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
     };
 
     const buttonStyle: React.CSSProperties = {
-        flex: "1",
+        flex: "0 1 auto", // shrink if needed, don't force fill
         padding: "0.5rem 0.75rem",
         backgroundColor: "#f7f7f7",
         borderRadius: "0.75rem",
         height: '6vh',
         boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
-        fontSize: "1.25rem",
+        fontSize: "0.75rem",
         cursor: "pointer",
-        color: 'black'
+        color: 'black',
+        minWidth: "2rem"
     };
 
     const backspaceSpacingStyle: React.CSSProperties = {
@@ -76,7 +77,7 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
                 ))}
             </div>
             <div key={1} style={rowStyle}>
-                <div style={spacingStyle}/>
+                <div style={spacingStyle} />
                 {"ASDFGHJKL".split("").map((key) => (
                     <button
                         key={key}
@@ -86,7 +87,7 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
                         {key}
                     </button>
                 ))}
-                <div style={spacingStyle}/>
+                <div style={spacingStyle} />
             </div>
             <div key={2} style={rowStyle}>
                 <div
