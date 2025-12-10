@@ -33,7 +33,7 @@ const CrosswordGrid: React.FC<CrosswordGridProps> = ({
         borderWidth: '2px',
         borderColor: '#374151', // Tailwind gray-700
         backgroundColor: '#ffffff',
-        width: '100%',
+        width: '80%',
         aspectRatio: 1,
         marginBottom: '0.5rem'
     };

@@ -387,17 +387,17 @@ export default function MiniCrossword() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '1rem'
+      padding: '1rem',
     }}>
       <div style={{
         borderRadius: '1.5rem',
         boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
         width: '100%',
-        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: '#ffffff',
+        maxWidth: '60vh'
       }}>
 
         {/* Timer */}

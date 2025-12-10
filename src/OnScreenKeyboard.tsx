@@ -11,7 +11,6 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
         flexDirection: "column",
         gap: "0.5rem",
         width: "100%",
-        flex: '1',
         userSelect: "none",
         padding: "0.5rem",
         backgroundColor: '#ccc',
@@ -22,7 +21,7 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
     const rowStyle: React.CSSProperties = {
         display: "flex",
         justifyContent: "center",
-        gap: "0.25rem",
+        gap: "0.375rem",
     };
 
     const spacingStyle: React.CSSProperties = {
@@ -34,8 +33,9 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
         padding: "0.5rem 0.75rem",
         backgroundColor: "#f7f7f7",
         borderRadius: "0.75rem",
+        height: '6vh',
         boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
-        fontSize: "1rem",
+        fontSize: "1.25rem",
         cursor: "pointer",
         color: 'black'
     };
