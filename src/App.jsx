@@ -412,18 +412,6 @@ export default function MiniCrossword() {
         }}>
           ⏱️ {formatTime(elapsed)}
         </div>
-        {feedback && (
-          <div style={{
-            padding: '0.75rem',
-            borderRadius: '0.5rem',
-            width: '100%',
-            textAlign: 'center',
-            backgroundColor: isSolved ? '#bbf7d0' : '#fef3c7',
-            color: isSolved ? '#166534' : '#78350f'
-          }}>
-            {feedback}
-          </div>
-        )}
 
         {/* Crossword Grid Component */}
         <CrosswordGrid
