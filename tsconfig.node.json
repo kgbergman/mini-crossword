@@ -6,7 +6,7 @@
     "module": "ESNext",
     "types": ["node"],
     "skipLibCheck": true,
-    "jsx": true,
+    "jsx": "react-jsx",
 
     /* Bundler mode */
     "moduleResolution": "bundler",
