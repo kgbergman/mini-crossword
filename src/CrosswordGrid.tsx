@@ -82,7 +82,7 @@ const CrosswordGrid: React.FC<CrosswordGridProps> = ({
                 width: '100%',
                 textAlign: 'center',
                 zIndex: 999,
-                backgroundColor: 'rgba(187, 247, 208, 0.80)',
+                backgroundColor: 'rgba(187, 247, 208, 0.90)',
                 color: '#166534',
                 display: 'flex',
                 flexDirection: 'column',
@@ -91,7 +91,8 @@ const CrosswordGrid: React.FC<CrosswordGridProps> = ({
                 opacity: showOverlay ? 1 : 0,
                 transform: showOverlay ? 'scale(1)' : 'scale(0.8)',
                 transition: 'opacity 0.3s ease, transform 0.3s ease',
-                gap: '0.75rem'
+                gap: '0.75rem',
+                pointerEvents: showOverlay ? 'auto' : 'none',
             }}>
                 <div>
                     {"🎉 You solved the puzzle!"}
