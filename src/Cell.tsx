@@ -30,8 +30,8 @@ const Cell: React.FC<CellProps> = ({
 }) => {
     if (solutionCell === "#") {
         const blackCellStyle: React.CSSProperties = {
-            width: '3.5rem',
-            height: '3.5rem',
+            display: 'flex',
+            flex: 1,
             backgroundColor: '#1f2937' // Tailwind gray-800
         };
         return <div key={`${r}-${c}`} style={blackCellStyle}></div>;
@@ -43,15 +43,15 @@ const Cell: React.FC<CellProps> = ({
 
     const cellContainerStyle: React.CSSProperties = {
         position: 'relative',
-        width: '3.5rem',
-        height: '3.5rem',
+        display: 'flex',
+        flex: 1
     };
 
     const clueNumberStyle: React.CSSProperties = {
         position: 'absolute',
         top: '0.125rem',
         left: '0.25rem',
-        fontSize: '0.625rem',
+        fontSize: '1rem',
         fontWeight: 'bold',
         color: '#374151', // gray-700
         zIndex: 10
@@ -61,7 +61,7 @@ const Cell: React.FC<CellProps> = ({
         width: '100%',
         height: '100%',
         textAlign: 'center',
-        fontSize: '1.125rem',
+        fontSize: '2.5rem',
         fontWeight: 600,
         color: '#1f2937',
         borderTop: '1px solid #d1d5db',

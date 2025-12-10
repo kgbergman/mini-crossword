@@ -13,7 +13,10 @@ const ClueList: React.FC<ClueListProps> = ({ activeClue }) => {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        gap: '1rem'
+        gap: '1rem',
+        paddingLeft: '0.5rem',
+        paddingRight: '0.5rem',
+        marginBottom: '0.5rem'
     };
 
     const textStyle: React.CSSProperties = {
@@ -30,6 +33,8 @@ const ClueList: React.FC<ClueListProps> = ({ activeClue }) => {
         alignItems: 'center',
         lineHeight: '1.25rem',
         overflow: 'hidden',
+        paddingLeft: '1rem',
+        paddingRight: '1rem',
     };
 
     const clueNumberStyle: React.CSSProperties = {

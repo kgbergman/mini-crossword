@@ -381,7 +381,7 @@ export default function MiniCrossword() {
 
   return (
     <div style={{
-      minHeight: '100vh',
+      height: '100%',
       background: 'linear-gradient(to bottom, #7c3aed, #4f46e5)',
       display: 'flex',
       flexDirection: 'column',
@@ -393,25 +393,25 @@ export default function MiniCrossword() {
         borderRadius: '1.5rem',
         boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
         width: '100%',
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '1.5rem',
         backgroundColor: '#ffffff',
       }}>
+
         {/* Timer */}
         <div style={{
           fontSize: '1.25rem',
           fontFamily: 'monospace',
           color: '#374151',
-          backgroundColor: '#ffffff',
           padding: '0.5rem 1rem',
-          borderRadius: '0.5rem'
+          borderRadius: '0.5rem',
+          marginTop: '0.25rem',
+          marginBottom: '0.25rem'
         }}>
           ⏱️ {formatTime(elapsed)}
         </div>
-
-
         {feedback && (
           <div style={{
             padding: '0.75rem',
@@ -424,7 +424,6 @@ export default function MiniCrossword() {
             {feedback}
           </div>
         )}
-
 
         {/* Crossword Grid Component */}
         <CrosswordGrid
