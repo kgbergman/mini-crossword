@@ -1,11 +1,10 @@
 // ClueList.tsx
 
 import React from 'react';
-import type { WordData, Direction } from './types';
+import type { WordData } from './types';
 
 interface ClueListProps {
     activeClue: WordData | null | undefined;
-    direction: Direction | null;
 }
 
 const ClueList: React.FC<ClueListProps> = ({ activeClue }) => {
