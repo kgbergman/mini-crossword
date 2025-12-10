@@ -9,14 +9,15 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
     const containerStyle: React.CSSProperties = {
         display: "flex",
         flexDirection: "column",
-        gap: "0.5rem",
+        gap: "0.375rem",
         width: "100%",
         userSelect: "none",
         padding: "0.5rem",
         backgroundColor: '#ccc',
         borderBottomRightRadius: '1.5rem',
         borderBottomLeftRadius: '1.5rem',
-        minHeight: '35vh'
+        minHeight: '35vh',
+        paddingBottom: '5vh'
     };
 
     const rowStyle: React.CSSProperties = {
@@ -31,16 +32,19 @@ const OnScreenKeyboard: React.FC<OnScreenKeyboardProps> = ({ keyPressed }) => {
     };
 
     const buttonStyle: React.CSSProperties = {
-        flex: "0 1 auto", // shrink if needed, don't force fill
+        flex: "1 auto", // shrink if needed, don't force fill
         padding: "0.5rem 0.75rem",
         backgroundColor: "#f7f7f7",
-        borderRadius: "0.75rem",
+        borderRadius: "0.5rem",
         height: '100%',
         boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
         fontSize: "1rem",
         cursor: "pointer",
         color: 'black',
         minWidth: "2rem",
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex'
     };
 
     const backspaceSpacingStyle: React.CSSProperties = {

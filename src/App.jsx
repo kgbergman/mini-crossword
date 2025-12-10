@@ -395,7 +395,7 @@ export default function MiniCrossword() {
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        maxWidth: '60vh'
+        aspectRatio: 11 / 18
       }}>
 
         {/* Timer */}
