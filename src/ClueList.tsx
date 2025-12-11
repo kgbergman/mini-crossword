@@ -2,17 +2,21 @@
 
 import React from 'react';
 import type { WordData } from './types';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import './ClueList.css';
 
 interface ClueListProps {
-    activeClue: WordData | null | undefined;
+    activeClue: WordData;
+    leftClicked: () => void;
+    rightClicked: () => void;
 }
 
-const ClueList: React.FC<ClueListProps> = ({ activeClue }) => {
+const ClueList: React.FC<ClueListProps> = ({ activeClue, leftClicked, rightClicked }) => {
     const containerStyle: React.CSSProperties = {
         width: '100%',
         display: 'flex',
-        flexDirection: 'column',
-        gap: '1rem',
+        flexDirection: 'row',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
         marginBottom: '0.5rem'
@@ -20,20 +24,22 @@ const ClueList: React.FC<ClueListProps> = ({ activeClue }) => {
 
     const textStyle: React.CSSProperties = {
         color: '#4b5563', // gray-600
-        fontSize: '1.125rem' // text-lg
+        fontSize: '1.125rem',
+        flex: 1
     };
 
     const clueBoxStyle: React.CSSProperties = {
         backgroundColor: '#bfdbfe', // blue-200
-        padding: '0.5rem',
         borderRadius: '0.5rem',
         height: '3.5rem',
         display: 'flex',
         alignItems: 'center',
         lineHeight: '1.25rem',
         overflow: 'hidden',
-        paddingLeft: '1rem',
-        paddingRight: '1rem',
+    };
+
+    const clueTextStyle: React.CSSProperties = {
+        flex: 1
     };
 
     const clueNumberStyle: React.CSSProperties = {
@@ -41,22 +47,22 @@ const ClueList: React.FC<ClueListProps> = ({ activeClue }) => {
         marginRight: '0.5rem'
     };
 
-    const placeholderStyle: React.CSSProperties = {
-        color: '#9ca3af', // gray-400
-        fontStyle: 'italic'
-    };
-
     return (
         <div style={containerStyle}>
             <div style={textStyle}>
-                {activeClue ? (
-                    <div style={clueBoxStyle}>
+                <div style={clueBoxStyle}>
+                    <button onClick={leftClicked} className='clue-button'>
+                        <ChevronLeftIcon />
+                    </button>
+                    <div style={clueTextStyle}>
                         <span style={clueNumberStyle}>{activeClue.number}.</span>
                         <span>{activeClue.clue}</span>
                     </div>
-                ) : (
-                    <p style={placeholderStyle}>Select a cell to begin.</p>
-                )}
+                    <button onClick={rightClicked} className='clue-button'>
+                        <ChevronRightIcon />
+                    </button>
+                </div>
+
             </div>
         </div>
     );

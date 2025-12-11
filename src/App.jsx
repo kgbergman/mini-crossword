@@ -325,6 +325,26 @@ export default function MiniCrossword() {
     return false;
   }
 
+  const leftClicked = () => {
+    const prevClue = getPrevClue(activeClue);
+    if (prevClue) {
+      if (prevClue.direction === "ACROSS") {
+        setActiveCell({ r: prevClue.row, c: prevClue.col, direction: prevClue.direction });
+      }
+      else {
+        setActiveCell({ r: prevClue.row, c: prevClue.col, direction: prevClue.direction });
+      }
+    }
+  }
+
+  const rightClicked = () => {
+    //If there is no more room in the active clue, move to the next clue
+    const nextClue = getNextClue(activeClue);
+    if (nextClue) {
+      setActiveCell({ r: nextClue.row, c: nextClue.col, direction: nextClue.direction });
+    }
+  }
+
   const handleKeyDown = (e) => {
     e.preventDefault();
     keyPressed(e.key);
@@ -431,7 +451,8 @@ export default function MiniCrossword() {
         {/* Clue List Component */}
         <ClueList
           activeClue={activeClue}
-          direction={activeCell?.direction ?? null}
+          leftClicked={leftClicked}
+          rightClicked={rightClicked}
         />
 
 
