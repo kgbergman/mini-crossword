@@ -14,6 +14,7 @@ interface CrosswordGridProps {
     handleClick: (r: number, c: number) => void;
     handleChange: (r: number, c: number, val: string) => void;
     handleKeyDown: (e: KeyboardEvent<HTMLInputElement>, r: number, c: number) => void;
+    handleNextPuzzle: () => void;
 }
 
 const CrosswordGrid: React.FC<CrosswordGridProps> = ({
@@ -24,7 +25,8 @@ const CrosswordGrid: React.FC<CrosswordGridProps> = ({
     highlightedCells,
     inputRefs,
     isSolved,
-    handleClick
+    handleClick,
+    handleNextPuzzle
 }) => {
     const [showOverlay, setShowOverlay] = useState(false);
 
@@ -110,7 +112,8 @@ const CrosswordGrid: React.FC<CrosswordGridProps> = ({
                     border: 'none',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease-in-out',
-                }}>
+                }}
+                onClick={handleNextPuzzle}>
                     Next Puzzle
                 </button>
             </div>

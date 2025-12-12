@@ -47,25 +47,47 @@ const ClueList: React.FC<ClueListProps> = ({ activeClue, leftClicked, rightClick
         marginRight: '0.5rem'
     };
 
-    return (
-        <div style={containerStyle}>
-            <div style={textStyle}>
-                <div style={clueBoxStyle}>
-                    <button onClick={leftClicked} className='clue-button'>
-                        <ChevronLeftIcon />
-                    </button>
-                    <div style={clueTextStyle}>
-                        <span style={clueNumberStyle}>{activeClue.number}.</span>
-                        <span>{activeClue.clue}</span>
+    if (activeClue) {
+        return (
+            <div style={containerStyle}>
+                <div style={textStyle}>
+                    <div style={clueBoxStyle}>
+                        <button onClick={leftClicked} className='clue-button'>
+                            <ChevronLeftIcon />
+                        </button>
+                        <div style={clueTextStyle}>
+                            <span style={clueNumberStyle}>{activeClue.number}.</span>
+                            <span>{activeClue.clue}</span>
+                        </div>
+                        <button onClick={rightClicked} className='clue-button'>
+                            <ChevronRightIcon />
+                        </button>
                     </div>
-                    <button onClick={rightClicked} className='clue-button'>
-                        <ChevronRightIcon />
-                    </button>
-                </div>
 
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+    else {
+        return (
+            <div style={containerStyle}>
+                <div style={textStyle}>
+                    <div style={clueBoxStyle}>
+                        <button onClick={leftClicked} className='clue-button'>
+                            <ChevronLeftIcon />
+                        </button>
+                        <div style={clueTextStyle}>
+                            <span>...</span>
+                        </div>
+                        <button onClick={rightClicked} className='clue-button'>
+                            <ChevronRightIcon />
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        );
+    }
 };
 
 export default ClueList;
